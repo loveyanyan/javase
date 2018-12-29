@@ -17,7 +17,21 @@ public class Demo1_Operator {
         //7     00000000 0000 0111
         //9     00000000 0000 1001
         //      00000000 0000 1110   14      按着二进制位，相同为0   不同为一
+        System.out.println("^:" + (1^3) );
+
+        int[] arr = {2,3,4,4,3,5,6,6,5};
+        System.out.println("lost:" + findLost(arr));
+    }
+
+        public static int findLost(int a[]){
+            int result=0;
+            for(int i=0;i<a.length;i++) {
+                result^=a[i];
+            }
+            return result;      //任意数和0异或得自身，任意数和自身异或得0
+        }
+
+
 
     }
-}
 
